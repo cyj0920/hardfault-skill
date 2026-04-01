@@ -1,0 +1,4 @@
+interface:
+  display_name: "Cortex-M HardFault"
+  short_description: "Decode Cortex-M fault crash evidence"
+  default_prompt: "Use $cortex-m-hardfault to analyze a Cortex-M fault dump and propose the next debugging steps."
