@@ -1,5 +1,7 @@
 # Cortex-M HardFault Diagnostic Skill
 
+**[🇨🇳 中文](./README.zh-CN.md)** | **English**
+
 A specialized skill for diagnosing Cortex-M series crashes including HardFault, MemManage, BusFault, and UsageFault. This tool helps embedded developers analyze register dumps, exception stack frames, disassembly, and map files to pinpoint fault locations and root causes.
 
 ## Features
@@ -114,7 +116,7 @@ cortex-m-hardfault/
 
 ## License
 
-[Specify your license here]
+MIT License
 
 ## Contributing
 

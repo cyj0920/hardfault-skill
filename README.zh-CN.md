@@ -1,5 +1,7 @@
 # Cortex-M HardFault 诊断 Skill
 
+**中文** | **[English](./README.md)**
+
 一个专门用于诊断 Cortex-M 系列崩溃的 skill，包括 HardFault、MemManage、BusFault 和 UsageFault。该工具帮助嵌入式开发者分析寄存器转储、异常栈帧、反汇编和 map 文件，以精确定位故障点和根本原因。
 
 ## 特性
@@ -114,7 +116,7 @@ cortex-m-hardfault/
 
 ## 许可证
 
-[在此指定您的许可证]
+MIT License
 
 ## 贡献
 
