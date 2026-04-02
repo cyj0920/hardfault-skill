@@ -2,8 +2,9 @@
 name: cortex-m-hardfault
 description: Diagnose Cortex-M HardFault, MemManage, BusFault, and UsageFault crashes from register dumps, stacked exception frames, map files, disassembly, startup code, RTOS context, or HardFault handler code. Use when Codex needs to decode HFSR/CFSR/MMFAR/BFAR/ABFSR, interpret EXC_RETURN and MSP/PSP selection, locate the faulting PC, distinguish Cortex-M0/M0+ from M3/M4/M7/M33 fault capabilities, or propose next debugging steps and handler improvements.
 ---
+# Codex Entry
 
-# Cortex-M HardFault
+This file is the Codex-specific integration layer for the `cortex-m-hardfault` skill.
 
 ## Workflow
 
@@ -11,12 +12,12 @@ Follow this skill when diagnosing a Cortex-M crash. Start by identifying the cor
 
 Use the references selectively:
 
-- Read [references/workflow.md](./references/workflow.md) first for the default triage flow.
-- Read [references/architecture-matrix.md](./references/architecture-matrix.md) when the core variant is unclear or the target is `M0/M0+`, `M7`, `M33`, or FPU-enabled.
-- Read [references/register-decode.md](./references/register-decode.md) when decoding `HFSR`, `CFSR`, `MMFAR`, `BFAR`, `ABFSR`, `CCR`, or `SHCSR`.
-- Read [references/root-cause-patterns.md](./references/root-cause-patterns.md) after the register decode to map the evidence to concrete engineering failure modes.
-- Read [references/handler-patterns.md](./references/handler-patterns.md) when the user needs to implement or improve a `HardFault_Handler`.
-- Run [scripts/decode_fault.py](./scripts/decode_fault.py) when the user provides raw register values and repeated bit decoding would add noise.
+- Read [../references/workflow.md](../references/workflow.md) first for the default triage flow.
+- Read [../references/architecture-matrix.md](../references/architecture-matrix.md) when the core variant is unclear or the target is `M0/M0+`, `M7`, `M33`, or FPU-enabled.
+- Read [../references/register-decode.md](../references/register-decode.md) when decoding `HFSR`, `CFSR`, `MMFAR`, `BFAR`, `ABFSR`, `CCR`, or `SHCSR`.
+- Read [../references/root-cause-patterns.md](../references/root-cause-patterns.md) after the register decode to map the evidence to concrete engineering failure modes.
+- Read [../references/handler-patterns.md](../references/handler-patterns.md) when the user needs to implement or improve a `HardFault_Handler`.
+- Run [../scripts/decode_fault.py](../scripts/decode_fault.py) when the user provides raw register values and repeated bit decoding would add noise.
 
 ## Default Procedure
 
@@ -93,3 +94,4 @@ When the user needs a handler implementation or review:
 - Differentiate debug and production behavior.
 - Avoid heavy logging, dynamic allocation, or peripheral access that can fault again inside the handler.
 - Prefer writing minimal crash records into reserved RAM, then reset or halt.
+
